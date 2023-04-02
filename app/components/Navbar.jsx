@@ -51,7 +51,7 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <div className="hidden sm:flex">
+        <div className="hidden sm:flex scroll-smooth">
           <ul className="hidden sm:flex gap-8">
             <a href="/#home">
               <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] text-xl">
