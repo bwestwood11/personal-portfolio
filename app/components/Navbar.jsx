@@ -145,6 +145,14 @@ const Navbar = () => {
                 Contact Me
               </li>
             </a>
+            <Link href="/blog">
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              >
+                My Blog
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="flex flex-row justify-around pt-10 items-center">
