@@ -19,6 +19,14 @@ const AppliancePlug = () => {
         <div className="col-span-4">
           <p className="mb-2">Project</p>
           <h2 className="mb-8">Overview</h2>
+          <a href="https://netflix-clone-3f4da.web.app/">
+            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
+          </a>
+          <a href="https://github.com/bwestwood11/netflix-build">
+            <button className="px-8 py-2 mt-4 mb-8" py-2 mt-4>
+              Code
+            </button>
+          </a>
           <p className="mb-8">
             The Appliance Plug is a local appliance store here in Tampa, FL. I have
             been working alongside this company as a software engineer to
@@ -33,24 +41,22 @@ const AppliancePlug = () => {
           <p className="mb-8">
           Next, I integrated Stripe to allow users to pay for their membership using a credit or debit card. I used the Stripe API to create payment forms and handle payment processing on the server-side. This made it easy for users to sign up and pay for their membership, which was a key part of my site's functionality.
           </p>
-          <a href="https://appliance-plug-membership-app.vercel.app/">
-            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-          </a>
-          <a href="https://github.com/bwestwood11/membership-app">
-            <button className="px-8 py-2 mt-4" py-2 mt-4>
-              Code
-            </button>
-          </a>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-cols-2 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React - NextJS
+                <RiRadioButtonFill className="pr-1" /> ReactJS
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Tailwindcss
+                <RiRadioButtonFill className="pr-1" /> Redux
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> Firebase
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> CSS
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Javascript

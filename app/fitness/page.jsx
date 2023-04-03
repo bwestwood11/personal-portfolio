@@ -19,6 +19,14 @@ const AppliancePlug = () => {
         <div className="col-span-4">
           <p className="mb-2">Project</p>
           <h2 className="mb-8">Overview</h2>
+          <a href="https://brettwestwood-gym.netlify.app/">
+            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
+          </a>
+          <a href="https://github.com/bwestwood11/Fitness-Exercises-API-App">
+            <button className="px-8 py-2 mt-4 mb-8" py-2 mt-4>
+              Code
+            </button>
+          </a>
           <p className="mb-8">
             The Appliance Plug is a local appliance store here in Tampa, FL. I have
             been working alongside this company as a software engineer to
@@ -33,14 +41,6 @@ const AppliancePlug = () => {
           <p className="mb-8">
           Next, I integrated Stripe to allow users to pay for their membership using a credit or debit card. I used the Stripe API to create payment forms and handle payment processing on the server-side. This made it easy for users to sign up and pay for their membership, which was a key part of my site's functionality.
           </p>
-          <a href="https://appliance-plug-membership-app.vercel.app/">
-            <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-          </a>
-          <a href="https://github.com/bwestwood11/membership-app">
-            <button className="px-8 py-2 mt-4" py-2 mt-4>
-              Code
-            </button>
-          </a>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
           <div className="p-2">
