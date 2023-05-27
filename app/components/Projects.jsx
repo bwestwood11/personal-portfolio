@@ -23,21 +23,22 @@ const Projects = () => {
       projectUrl='/applianceplug'
       number='01'
       technology = 'MERN Stack'
+      /> 
+       <ProjectItem 
+      title='Competitive Edge Junk Removal' 
+      backgroundImg={junkremoval}
+      projectUrl='/competitiveedgejunkremoval'
+      number='02'
+      technology='Next JS 13'
       />
       <ProjectItem 
       title='Fitness Application' 
       backgroundImg={fitness}
       projectUrl='/fitness'
-      number='02'
+      number='03'
       technology='React JS'
       />
-      <ProjectItem 
-      title='Competitive Edge Junk Removal' 
-      backgroundImg={junkremoval}
-      projectUrl='/competitiveedgejunkremoval'
-      number='03'
-      technology='Next JS 13'
-      />
+    
       <ProjectItem 
       title='Netflix Clone with Authentication' 
       backgroundImg={netflixImg}

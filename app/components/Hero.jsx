@@ -5,10 +5,21 @@ import React from "react";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 import Typed from 'react-typed'
+import blur from '../../public/blur.png'
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div id="home" className="w-full h-screen text-center md:pt-40 md:-mb-72">
+    <div id="home" className="w-full h-screen text-center relative md:pt-40 md:-mb-72">
+      <Image
+        src={blur}
+        alt="blur1"
+        objectFit="cover"
+        layout="fill"
+        className="absolute animate-pulse z-[-1]"
+        quality={100}
+        priority
+      />
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-600">

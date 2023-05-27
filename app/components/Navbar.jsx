@@ -40,7 +40,7 @@ const Navbar = () => {
           : "fixed w-full h-20 z-[100]"
       }
     >
-      <div className="flex justify-between sm:justify-around  items-center h-full w-full px-4 2xl:px-16">
+      <div className="flex justify-between sm:justify-around items-center h-full w-full px-4 2xl:px-16">
         <Link href="/">
           <Image
             src={logo}
