@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params: { postId } }) {
-  const post = await getPostByName(postId.mdx); // deduped!
+  const post = await getPostByName(`${postId}.mdx`); // deduped!
 
   if (!post) {
     return {
