@@ -21,7 +21,7 @@ export default function ListItem({ post }) {
             />
           </Link>
           <div className="absolute bottom-0 w-full bg-opacity-20 bg-black backdrop-blur-lg rounded drop-shadow-lg text-white p-3 sm:p-5 flex justify-between">
-            <Link className="font-bold" href={`/posts/${id}`}>
+            <Link className="font-bold text-xs sm:text-lg" href={`/posts/${id}`}>
               {title}
               <p className="text-xs sm:text-sm mt-1">{formattedDate}</p>
             </Link>
