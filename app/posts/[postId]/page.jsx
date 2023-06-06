@@ -1,59 +1,61 @@
-import getFormattedDate from '@/lib/getFormattedDate';
-import { getPostData, getSortedPostsData } from '@/lib/posts';
-import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import getFormattedDate from "@/lib/getFormattedDate";
+import { getPostsMeta, getPostByName } from "@/lib/posts";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import "highlight.js/styles/github-dark.css";
 
-export function generateStaticParams() {
-    const posts = getSortedPostsData(); // deduped!
+export const revalidate = 10;
 
-    return posts.map((post) => ({
-        postId: post.id
-    }))
+export async function generateStaticParams() {
+  const posts = await getPostsMeta(); // deduped!
+
+  return posts.map((post) => ({
+    postId: post.id,
+  }));
 }
 
+export async function generateMetadata({ params: { postId } }) {
+  const post = await getPostByName(postId.mdx); // deduped!
 
-export function generateMetadata({ params }) {
-
-    const posts = getSortedPostsData(); // deduped!
-    const { postId } = params
- 
-    const post = posts.find(post => post.id === postId) 
-
-    if(!post) {
-        return {
-            title: 'Post Not Found'
-        }
-    }
-   
+  if (!post) {
     return {
-        title: post.title,
-    }
+      title: "Post Not Found",
+    };
+  }
+
+  return {
+    title: post.meta.title,
+  };
 }
 
+export default async function Post({ params: { postId } }) {
+  const post = await getPostByName(`${postId}.mdx`); // deduped!
+  console.log("post", post);
 
-export default async function Post({ params }) {
+  if (!post) notFound();
 
-   const posts = getSortedPostsData(); // deduped!
-   const { postId } = params
+  const { meta, content } = post;
 
-   if (!posts.find(post => post.id === postId)) {
-    return notFound()
-   }
+  const pubDate = getFormattedDate(meta.date);
 
-   const {title, date, contentHtml} = await getPostData(postId);
-
-   const pubDate = getFormattedDate(date)
+  const tags = meta.tags.map((tag, i) => (
+    <Link key={i} href={`/tags/${tag}`}>
+      {tag}
+    </Link>
+  ));
 
   return (
-    <main className='px-6 prose prose-xl prose-slate pt-36 mx-auto'>
-   <h1 className='text-3xl mt-4 mb-0'>{title}</h1>
-   <p className='mt-0'>{pubDate}</p>
-   <article>
-    <section dangerouslySetInnerHTML = {{ __html: contentHtml }} />
-    <p>
-        <Link href='/blog'>Back to blog</Link>
-    </p>
-   </article>
+    <main className="px-6 prose prose-xl prose-slate pt-36 mx-auto">
+      <h1 className="text-3xl mt-4 mb-0">{meta.title}</h1>
+      <p className="mt-0">{pubDate}</p>
+      <article>{content}</article>
+      <section>
+        <h3>Related:</h3>
+        <div className="flex flex-row gap-4">{tags}</div>
+      </section>
+      <p>
+        <Link href="/blog">Back to blog</Link>
+      </p>
     </main>
-  )
+  );
 }
