@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { RiRadioButtonFill } from "react-icons/ri";
-import Monitor1 from "../../public/projects/Monitor1.png";
+import junkremovalImg from "../../public/projects/junkimg.png";
 
 const junkRemoval = () => {
   return (
@@ -13,7 +13,7 @@ const junkRemoval = () => {
       <div className="w-full items-center justify-center align-middle mx-auto">
         <Image
           className="mx-auto object-contain lg:max-w-[1240px]"
-          src={Monitor1}
+          src={junkremovalImg}
           alt="Computer Mockup"
         />
       </div>
@@ -31,47 +31,33 @@ const junkRemoval = () => {
             </button>
           </a>
           <p className="mb-8">
-            Competitive Edge Junk Removal is a local junk removal company in
-            Tampa, FL that is looking to expand their business. They wanted a
-            website that would allow them to reach more customers and increase
-            their revenue. I created a website for them using NextJS and
-            TailwindCSS that allows customers to book appointments online and
-            learn more about their services.
+          Competitive Edge Junk Removal, a reputable junk removal company based in Tampa, FL, is actively seeking opportunities to grow its business and expand its customer base. Recognizing the need to leverage the power of the internet to attract a wider audience and boost revenue, they approached me to design a dynamic website tailored to their specific requirements. By harnessing the combined capabilities of NextJS 13 and TailwindCSS, I successfully crafted a user-friendly website that not only enables customers to effortlessly rent dumpsters online but also provides comprehensive information about the company's exceptional range of services.
           </p>
           <p className="mb-8">
-            The membership site using the MERN stack, which was a very rewarding
-            experience. To begin, I set up my MongoDB database to store user
-            information, such as email addresses, usernames, and passwords.
-            Then, I used Express to create a RESTful API that allowed my React
-            frontend to communicate with the MongoDB database.
+          The newly developed website serves as a powerful tool that not only showcases Competitive Edge Junk Removal's expertise but also significantly enhances their accessibility and convenience for potential customers. With the seamless integration of NextJS, visitors can now conveniently schedule appointments through a secure online booking system, eliminating the need for time-consuming phone calls or in-person inquiries. This modern approach not only saves customers valuable time but also enhances their overall experience, leading to increased satisfaction and repeat business.
           </p>
           <p className="mb-8">
-            One of the most important features of my membership site was
-            authentication, which I implemented using JWT tokens. I created a
-            login form for users to enter their credentials, and I stored
-            session data to keep users logged in across pages. This ensured that
-            only authorized users could access my membership site.
-          </p>
-          <p className="mb-8">
-            Next, I integrated Stripe to allow users to pay for their membership
-            using a credit or debit card. I used the Stripe API to create
-            payment forms and handle payment processing on the server-side. This
-            made it easy for users to sign up and pay for their membership,
-            which was a key part of my site's functionality.
+          I utilized the Stripe API so that customers can pay for their dumpster rentals online. This feature is a significant improvement over the company's previous payment system, which required customers to pay in person or over the phone. The new system is not only more convenient for customers but also more secure, as it eliminates the need for customers to share their credit card information over the phone. The Stripe API also allows the company to accept a wide range of payment methods, including credit cards, debit cards, and Apple Pay.
           </p>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4 sm:h-[30%]">
+        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4 sm:h-[40%]">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-cols-2 md:grid-cols-1">
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React - NextJS
+                <RiRadioButtonFill className="pr-1" /> React - NextJS 13
               </p>
               <p className="text-gray-600 py-2 flex items-center">
                 <RiRadioButtonFill className="pr-1" /> Tailwindcss
               </p>
               <p className="text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Javascript
+                <RiRadioButtonFill className="pr-1" /> JavaScript
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> Stripe API
+              </p>
+              <p className="text-gray-600 py-2 flex items-center">
+                <RiRadioButtonFill className="pr-1" /> MongoDB
               </p>
             </div>
           </div>

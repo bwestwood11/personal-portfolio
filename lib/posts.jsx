@@ -5,10 +5,13 @@ import rehypeSlug from "rehype-slug";
 import Video from "@/app/components/Video";
 import CustomImage from "@/app/components/CustomImage";
 
+
+
 export async function getPostByName(fileName) {
   const res = await fetch(
     `https://raw.githubusercontent.com/bwestwood11/blogPosts/main/${fileName}`,
     {
+      next: {revalidate: 86400},
       headers: {
         Accept: "application/vnd.github+json",
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
@@ -56,6 +59,7 @@ export async function getPostsMeta() {
   const res = await fetch(
     "https://api.github.com/repos/bwestwood11/blogPosts/git/trees/main?recursive=1",
     {
+      next: {revalidate: 86400},
       headers: {
         Accept: "application/vnd.github+json",
         Authorization: `token ${process.env.GITHUB_TOKEN}`,

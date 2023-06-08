@@ -28,21 +28,19 @@ const AppliancePlug = () => {
             </button>
           </a>
           <p className="mb-8">
-            The Appliance Plug is a local appliance store here in Tampa, FL. I have
-            been working alongside this company as a software engineer to
-            implement a paid membership program. 
+          Step into the world of immersive entertainment with my groundbreaking creation—a Netflix clone built with the power of ReactJS, complemented by the seamless state management capabilities of Redux. Immerse yourself in a visually stunning user interface meticulously crafted using CSS, where every pixel exudes elegance and intuitive design. Elevating the user experience to new heights, I seamlessly integrated Firebase, empowering users with secure authentication that ensures their personal data remains safeguarded at all times.
           </p>
           <p className="mb-8">
-          The membership site using the MERN stack, which was a very rewarding experience. To begin, I set up my MongoDB database to store user information, such as email addresses, usernames, and passwords. Then, I used Express to create a RESTful API that allowed my React frontend to communicate with the MongoDB database.
+          Harnessing the vast wealth of content from the moviedb API, my Netflix clone becomes a gateway to a treasure trove of cinematic delights. With a few clicks, users can dive into an extensive library of movies and TV shows, effortlessly browsing and discovering their next favorite piece of entertainment. The integration of the moviedb API enables real-time data fetching, ensuring that the clone remains up-to-date with the latest releases and trends, delivering an unrivaled streaming experience that keeps viewers captivated.
           </p>
           <p className="mb-8">
-          One of the most important features of my membership site was authentication, which I implemented using JWT tokens. I created a login form for users to enter their credentials, and I stored session data to keep users logged in across pages. This ensured that only authorized users could access my membership site.
+          From the moment users land on the Netflix clone, they are greeted with a seamless fusion of aesthetics and functionality. The synergy between ReactJS and Redux provides a solid foundation for dynamic content rendering and intuitive user interactions. Leveraging Redux's robust state management capabilities, the clone effortlessly handles complex data flow, ensuring a smooth and uninterrupted streaming experience. By tapping into the power of Firebase, authentication becomes a breeze, offering users a secure environment to create accounts, manage profiles, and unlock personalized recommendations.
           </p>
           <p className="mb-8">
-          Next, I integrated Stripe to allow users to pay for their membership using a credit or debit card. I used the Stripe API to create payment forms and handle payment processing on the server-side. This made it easy for users to sign up and pay for their membership, which was a key part of my site's functionality.
+          Embark on an extraordinary streaming journey with my Netflix clone, where ReactJS, Redux, CSS, Firebase, and the moviedb API converge to redefine the way you enjoy your favorite movies and TV shows. Lose yourself in a world of limitless entertainment, enhanced by an elegant UI, secure authentication, and a vast array of captivating content at your fingertips.
           </p>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
+        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4 sm:h-[40%]">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-cols-2 md:grid-cols-1">

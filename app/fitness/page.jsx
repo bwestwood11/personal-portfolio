@@ -28,21 +28,13 @@ const AppliancePlug = () => {
             </button>
           </a>
           <p className="mb-8">
-            The Appliance Plug is a local appliance store here in Tampa, FL. I have
-            been working alongside this company as a software engineer to
-            implement a paid membership program. 
+          This application is designed to empower and inspire, providing you with a comprehensive collection of workouts and exercises meticulously sourced from the esteemed RapidAPI marketplace. With a plethora of options at your fingertips, you can customize your fitness regimen to align perfectly with your goals and preferences. Leveraging the exceptional capabilities of Axios, I seamlessly integrated smooth and efficient HTTP requests, ensuring a seamless flow of data between the app and the RapidAPI marketplace.
           </p>
           <p className="mb-8">
-          The membership site using the MERN stack, which was a very rewarding experience. To begin, I set up my MongoDB database to store user information, such as email addresses, usernames, and passwords. Then, I used Express to create a RESTful API that allowed my React frontend to communicate with the MongoDB database.
-          </p>
-          <p className="mb-8">
-          One of the most important features of my membership site was authentication, which I implemented using JWT tokens. I created a login form for users to enter their credentials, and I stored session data to keep users logged in across pages. This ensured that only authorized users could access my membership site.
-          </p>
-          <p className="mb-8">
-          Next, I integrated Stripe to allow users to pay for their membership using a credit or debit card. I used the Stripe API to create payment forms and handle payment processing on the server-side. This made it easy for users to sign up and pay for their membership, which was a key part of my site's functionality.
+          Behind the scenes, the seamless integration of Axios seamlessly facilitates communication between the fitness app clone and the RapidAPI marketplace. With Axios expertly handling the HTTP requests, you can rest assured that data retrieval is reliable, efficient, and always up-to-date. This frictionless interaction ensures that the latest workouts, exercises, and fitness trends are readily available at your fingertips, allowing you to stay at the forefront of the ever-evolving fitness landscape.
           </p>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
+        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4 h-[40%]">
           <div className="p-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className="grid grid-cols-2 md:grid-cols-1">

@@ -37,7 +37,7 @@ const Navbar = () => {
       className={
         shadow
           ? "fixed w-full h-20 shadow-xl z-[100]"
-          : "fixed w-full h-20 z-[100]"
+          : "fixed border-b-2 w-full h-20 z-[100]"
       }
     >
       <div className="flex justify-between sm:justify-around items-center h-full w-full px-4 2xl:px-16">
@@ -153,6 +153,14 @@ const Navbar = () => {
                 My Blog
               </li>
             </Link>
+            <a href="https://www.youtube.com/channel/UCUbz7tRWnl82NHKRrQWWolg">
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              >
+                My YouTube Channel
+              </li>
+            </a>
           </ul>
         </div>
         <div className="flex flex-row justify-around pt-10 items-center">
