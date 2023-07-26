@@ -16,6 +16,10 @@ export async function POST(request) {
             react: EmailTemplate({ firstName: name }),
 
         });
+
+        if(data.status === 'success') {
+            return NextResponse.json({ message: 'Email Successfully Sent!' })
+        }
         return NextResponse.json(data)
     } catch (error) {
            console.log('error', error)

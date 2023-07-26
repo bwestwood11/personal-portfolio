@@ -9,6 +9,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import contactImg from "../../public/contactImg.jpg";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
 const [data, setData] = useState({
@@ -29,6 +30,13 @@ const [data, setData] = useState({
       },
       body: JSON.stringify(data),
     })
+    
+     if(response.status === 200) {
+      setData({})
+    toast.success(`Hey ${data.name}, your message was sent successfully!`)
+
+     }
+
   };
 
 
