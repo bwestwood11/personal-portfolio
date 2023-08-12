@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -12,33 +12,51 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { toast } from "react-hot-toast";
 
 const Contact = () => {
-const [data, setData] = useState({
-  name: "",
-  email: "",
-  phone: "",
-  subject: "",
-  message: "",
-});
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
 
+  if(loading) return toast.loading("Sending Message...");
 
-  const sendEmail = async (e) => {
+  const sendEmail = async (e) => { 
     e.preventDefault();
-    const response = await fetch('/api/send', {
-      method: 'POST',
+    if (!data.name) {
+      return toast.error("Please enter your name");
+    }
+    if (!data.email) {
+      return toast.error("Please enter your email");
+    }
+    if (!data.phone) {
+      return toast.error("Please enter your phone number");
+    }
+    if (!data.subject) {
+      return toast.error("Please enter a subject");
+    }
+    if (!data.message) {
+      return toast.error("Please enter a message");
+    }
+
+    setLoading(true);
+    const response = await fetch("/api/send", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    })
-    
-     if(response.status === 200) {
-      setData({})
-    toast.success(`Hey ${data.name}, your message was sent successfully!`)
+    });
 
-     }
-
+    if (response.status === 200) {
+      setData({}); 
+      setLoading(false);
+      toast.success(`Hey ${data.name}, your message was sent successfully! Check your inbox!`);
+     
+    }
   };
-
 
   return (
     <div id="contact" className="w-full lg:h-screen sm:pt-96">
@@ -104,7 +122,9 @@ const [data, setData] = useState({
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                       value={data.name}
-                      onChange={(e) => setData({ ...data, name: e.target.value })}
+                      onChange={(e) =>
+                        setData({ ...data, name: e.target.value })
+                      }
                     />
                   </div>
                   <div className="flex flex-col">
@@ -115,7 +135,9 @@ const [data, setData] = useState({
                       className="border-2 rounded-lg p-3 flex border-gray-300"
                       type="text"
                       value={data.phone}
-                      onChange={(e) => setData({ ...data, phone: e.target.value })}
+                      onChange={(e) =>
+                        setData({ ...data, phone: e.target.value })
+                      }
                     />
                   </div>
                 </div>
@@ -125,7 +147,9 @@ const [data, setData] = useState({
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="Email"
                     value={data.email}
-                    onChange={(e) => setData({ ...data, email: e.target.value })}
+                    onChange={(e) =>
+                      setData({ ...data, email: e.target.value })
+                    }
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -134,7 +158,9 @@ const [data, setData] = useState({
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
                     value={data.subject}
-                    onChange={(e) => setData({ ...data, subject: e.target.value })}
+                    onChange={(e) =>
+                      setData({ ...data, subject: e.target.value })
+                    }
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -143,7 +169,9 @@ const [data, setData] = useState({
                     className="border-2 rounded-lg p-3 border-gray-300"
                     rows="10"
                     value={data.message}
-                    onChange={(e) => setData({ ...data, message: e.target.value })}
+                    onChange={(e) =>
+                      setData({ ...data, message: e.target.value })
+                    }
                   ></textarea>
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">

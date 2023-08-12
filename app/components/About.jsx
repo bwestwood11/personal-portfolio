@@ -9,7 +9,7 @@ import profileImage from '../../public/profileImg.png'
 const About = () => {
 
   const handleClick = () => {
-    window.open('/resume.pdf')
+    window.open('/professionalresume.pdf')
   }
 
   return (

@@ -11,7 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Toaster position="bottom-right" toastOptions={{ duration: 3000 }} />
+        <Toaster position="top-center" toastOptions={{ duration: 3000, style: {
+          background: '#333',
+          color: '#fff',
+        } }} />
         <Navbar />
         {children}
       </body>

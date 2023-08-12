@@ -7,6 +7,7 @@ import restaurantImg from '../../public/projects/restaurantImg.png'
 import netflixImg from '../../public/projects/netflixImg.png'
 import membership from '../../public/projects/membership.png'
 import junkremoval from '../../public/projects/junkremoval.jpg'
+import echovoice from '../../public/projects/echoimage.png'
 
 
 const Projects = () => {
@@ -32,11 +33,11 @@ const Projects = () => {
       technology='Next JS 13'
       />
       <ProjectItem 
-      title='Fitness Application' 
-      backgroundImg={fitness}
-      projectUrl='/fitness'
+      title='Echo Voice AI - SaaS Application' 
+      backgroundImg={echovoice}
+      projectUrl='/voiceai'
       number='03'
-      technology='React JS'
+      technology='Next.js & Tailwind CSS'
       />
     
       <ProjectItem 
