@@ -2,6 +2,14 @@ import ListItem from "../components/ListItem";
 import { getPostsMeta } from "@/lib/posts";
 import { ImYoutube2 } from 'react-icons/im'
 
+export const metadata = {
+  title: "Blog",
+  description: "Brett Westwood's blog",
+  alternates: {
+    canonical: "https://www.brettwestwood.dev/blog"
+  }
+}
+
 export default async function Posts() {
     const posts = await getPostsMeta();
 

@@ -9,6 +9,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const revalidate = 10;
 
+export const metadata = {
+  title: "Brett's Web Development Portfolio",
+  description: "Portfolio for full-stack web developer in Tampa, FL",
+  alternates: {
+    canonical: "https:www.brettwestwood.dev"
+  }
+  
+}
+
 export default function Home() {
   return (
     <main>
