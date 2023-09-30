@@ -40,7 +40,7 @@ const Navbar = () => {
           : "fixed border-b-2 w-full h-20 z-[100]"
       }
     >
-      <div className="flex justify-between sm:justify-around items-center h-full w-full px-4 2xl:px-16">
+      <div className="flex justify-around max-w-7xl mx-auto items-center h-full w-full px-4 2xl:px-16">
         <Link href="/">
           <Image
             src={logo}
@@ -52,29 +52,29 @@ const Navbar = () => {
           />
         </Link>
         <div className="hidden sm:flex scroll-smooth">
-          <ul className="hidden sm:flex gap-8">
+          <ul className="hidden sm:flex items-center xl:gap-8">
             <a href="/#home">
-              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] text-xl">
+              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] lg:text-xl">
                 Home
               </li>
             </a>
             <a href="#about-section">
-              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] text-xl">
+              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] whitespace-nowrap lg:text-xl">
                 About Me
               </li>
             </a>
             <a href="/#projects">
-              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] text-xl">
+              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] lg:text-xl">
                 Projects
               </li>
             </a>
             <a href="/#skills">
-              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] text-xl ">
+              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] lg:text-xl ">
                 Skills
               </li>
             </a>
             <a href="/#contact">
-              <li className="mx-10 uppercase font-semibold hover:text-[#f1592a] text-xl ">
+              <li className="mx-10 uppercase font-semibold hover:text-[#f1592a] lg:text-xl ">
                 Contact
               </li>
             </a>
@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
         <div>
           <Link href="/blog">
-            <button className="hidden sm:flex className='mt-8 w-full justify-center rounded-md border border-transparent bg-[#f1592a] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'">
+            <button className="hidden sm:flex className='mt-8 w-full justify-center rounded-md border border-transparent bg-[#f1592a] whitespace-nowrap py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-black">
               My Blog
             </button>
           </Link>{" "}

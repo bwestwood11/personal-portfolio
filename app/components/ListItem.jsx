@@ -5,6 +5,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 export default function ListItem({ post }) {
   const { id, title, date, cover_image, category, description } = post;
+  console.log("post", post);
   const formattedDate = getFormattedDate(date);
 
   return (

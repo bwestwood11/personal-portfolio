@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div
       id="about-section"
-      className="w-full p-2 flex items-center md:mt-60 mx-auto max-w-[1280px]"
+      className="w-full px-8 flex items-center mx-auto max-w-7xl"
     >
      <div className="flex flex-col">
        <h1>About</h1>
@@ -33,14 +33,14 @@ const About = () => {
             </p>
       <button onClick={handleClick} className="w-1/3 py-2 mt-16">Resume</button>
               </div>
-              <div className="flex basis-1/2 mt-8 sm:mt-0">
+              <div className="flex basis-1/2 mt-8 sm:mt-0 justify-center">
            <Image 
            src={profileImage}
           alt='brett-westwood'
           height={500}
           width={500}
            priority
-           className="rounded-full shadow-2xl shadow-black/70 mt-8 md:mt-0"
+           className="rounded-full shadow-2xl shadow-black/70 mt-8 md:h-3/4 lg:h-full md:mt-0"
            />
               </div>
        </div>

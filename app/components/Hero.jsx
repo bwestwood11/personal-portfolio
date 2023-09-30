@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div id="home" className="w-full h-screen text-center relative md:pt-40 md:-mb-72">
+    <div id="home" className="w-full text-center relative pt-32 pb-20 md:py-40 h-full">
       <Image
         src={blur}
         alt="blur1"

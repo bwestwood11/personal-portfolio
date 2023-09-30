@@ -2,7 +2,7 @@ import getFormattedDate from "@/lib/getFormattedDate";
 import { getPostsMeta, getPostByName } from "@/lib/posts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import "highlight.js/styles/github-dark.css";
+import "highlight.js/styles/atom-one-dark.css";
 
 export const revalidate = 10;
 
@@ -14,6 +14,7 @@ export async function generateStaticParams() {
   }));
 }
 
+// Dynamic Metadata for each post page
 export async function generateMetadata({ params: { postId } }) {
   const post = await getPostByName(`${postId}.mdx`); // deduped!
 
